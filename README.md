@@ -1,2 +1,1 @@
-# laud-page
-click here
+https://vimal-laud-page.netlify.app/
