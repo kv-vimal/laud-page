@@ -1,0 +1,252 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+}
+
+/*---------Navbar-----------*/
+nav {
+	background: #000;
+	padding-top: 20px;
+}
+nav ul {
+	margin-left: 250px;
+}
+nav ul li {
+	display: inline;
+	margin-right: 25px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #c7c7c7;
+	font-size: 0.9rem;
+}
+/*---------Header-----------*/
+
+.title {
+	padding-top: 160px;
+	height: 350px;
+	background: #000;
+	text-align: center;
+	color: #c7c7c7;
+}
+.title p {
+	margin-top: 20px;
+}
+
+/*---------About-----------*/
+#about {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: "abt1 image" "abt2 image";
+	gap: 4rem;
+	margin: 100px 200px 10px 250px;
+}
+
+#about_1 p,
+#about_2 p {
+	padding-top: 20px;
+	font-size: 0.8rem;
+	color: #323535;
+}
+
+#about_1 {
+	grid-area: abt1;
+}
+#about_2 {
+	grid-area: abt2;
+}
+#profile-image {
+	grid-area: image;
+}
+
+img {
+	height: 400px;
+}
+
+#info {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#info button {
+	height: 50px;
+	width: 140px;
+	font-size: 1rem;
+	border: none;
+	margin: 0 10px 50px 0;
+	color: #fff;
+	border-radius: 5px;
+}
+#info button#one {
+	background-color: #9c9c9c;
+}
+#info button#two {
+	background-color: #ff0000;
+}
+#info button#three {
+	background-color: #e67b17;
+}
+.small_quote {
+	text-align: center;
+	padding: 55px 0 55px 0;
+	background: #000;
+	color: #c7c7c7;
+	font-weight: 900;
+}
+
+/*---------Achievements-----------*/
+#achievements h2,
+.poetry_list h3 {
+	padding: 50px 0 50px 0;
+	overflow: hidden;
+	text-align: center;
+}
+#achievements h2:before,
+#achievements h2:after,
+.poetry_list h3:before,
+.poetry_list h3:after {
+	background: #808080;
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+#achievements h2:before,
+.poetry_list h3:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+#achievements h2:after,
+.poetry_list h3:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+.awards {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+#award_one,
+#award_two,
+#award_three,
+#award_four {
+	border: 1px solid #d1cece;
+	padding: 3px;
+	width: 200px;
+	height: 75px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+#award_one span,
+#award_two span,
+#award_three span,
+#award_four span {
+	margin: 2px;
+	font-size: 0.6rem;
+	color: #272727;
+}
+#award_one p,
+#award_two p,
+#award_three p,
+#award_four p {
+	margin-top: 3px;
+	font-size: 0.65rem;
+}
+
+.poetry_list {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 1rem;
+	color: #272727;
+}
+.poetry_list h3 {
+	margin-bottom: 20px;
+}
+.poetry_list ul li {
+	font-size: 0.7rem;
+	padding: 2px;
+	width: 400px;
+}
+/*----------footer-----------*/
+footer {
+	padding: 50px;
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: #000;
+	color: #c7c7c7;
+}
+footer div {
+	width: 300px;
+}
+footer p {
+	padding-top: 10px;
+	font-size: 0.8rem;
+}
+
+footer a {
+	text-decoration: none;
+	color: #282a8f;
+}
+footer .vl {
+	border-left: 1px solid #fff;
+	height: 100px;
+	width: 1px;
+	padding: 5px;
+}
+
+footer span {
+	color: #808080;
+}
+/**---------------------------Responsive Design--------------------------------------**/
+@media screen and (max-width: 767px) {
+	nav ul {
+		margin-left: 20px;
+	}
+	nav ul li {
+		display: list-item;
+		padding-top: 10px;
+	}
+	#about {
+		grid-template-columns: 1fr;
+		grid-template-areas: "image" "abt1" "abt2";
+		gap: 1rem;
+		margin: 10px 50px 10px 20px;
+	}
+
+	.awards {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+	.poetry_list {
+		margin: 50px 0 0 50px;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+	.poetry_list ul li {
+		width: 300px;
+	}
+	footer {
+		padding: 50px;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	footer .vl {
+		width: 100%;
+		height: 0.05px;
+		background: #fff;
+	}
+}
